@@ -173,6 +173,37 @@ function randomMole(){
     hitTrick = randomTrick.id;
 }
 
+//if a square with the id hit-x has been hit, the point is added to the appropriate score. 
+squares.forEach(square => {
+    square.addEventListener('mousedown' , () => {
+
+        farmerDiv.classList.remove('farmer');
+        farmerDiv.classList.add('farmerwhack');
+
+        if (square.id == hitPosition){
+            result ++
+            score.textContent = result;
+            hitPosition = null;
+        }
+
+        if (square.id == hitFriend){
+            oopsie ++
+            oopsiescore.textContent = oopsie;
+            hitFriend = null;
+        }
+
+        if (square.id == hitTrick){
+            molestrick ++
+            molescore.textContent = molestrick;
+            hitTrick = null;
+        }
+    })
+    square.addEventListener('mouseup' , () => {
+        farmerDiv.classList.remove('farmerwhack');
+        farmerDiv.classList.add('farmer');
+    })
+} )
+
 
 
 //now start-stop function which allows the game to be started and restarted using buttons. 
