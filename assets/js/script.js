@@ -91,3 +91,84 @@ function easiness(x){
         return assigning = 1300 , popping = 1100 
     }
 }
+
+
+
+//assigning the classes to each square
+function randomMole(){
+    //to 3 choose random numbers
+    var arr = [];
+    var lis = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    var newlis = []
+    var newlis2 = []
+    var newlis3 = []
+
+
+    //to 3 choose random numbers
+    while(arr.length < 3){
+        var r = Math.floor(Math.random() * 8) + 1;
+        if(arr.indexOf(r) === -1) arr.push(r);
+    }
+    let a = arr[0];
+    let b = arr[1];
+    let c = arr[2];
+
+    for (let i = 0; i < 9; i++) {
+        if (lis[i] !== a) {
+            newlis.push(lis[i]);
+        }
+    }
+    for (let i = 0; i < 8; i++) {
+        if (newlis[i] !== b) {
+            newlis2.push(newlis[i]);
+        }
+    }
+    for (let i = 0; i < 7; i++) {
+        if (newlis2[i] !== c) {
+            newlis3.push(newlis2[i]);
+        }
+    }//this is the list of squares without mole, friend or trick. 
+
+    //to clear the previous square classes
+    squares.forEach(square => {
+        square.classList.remove('mound');
+
+        square.classList.remove('molehint');
+        square.classList.remove('friendhint');
+        square.classList.remove('trickhint');
+
+        square.classList.remove('mole');
+        square.classList.remove('friend');
+        square.classList.remove('trick');
+
+    } )
+
+    //to make the behind look like mounds. 
+    for(let i = 0; i < 7; i++) {
+        squares[newlis2[i]].classList.add('mound')
+        }
+    //to assign new hint squares
+    let randomMole= squares[a];
+    let randomFriend= squares[b];
+    let randomTrick= squares[c];
+
+    randomMole.classList.add('molehint');
+    randomFriend.classList.add('friendhint');
+    randomTrick.classList.add('trickhint');
+
+    //assign the actual pop ups moles, rabbits, trick
+    function PopUp(){
+        randomMole.classList.add('mole');
+        randomFriend.classList.add('friend');
+        randomTrick.classList.add('trick');
+    }
+
+    timerPopUp = setTimeout(PopUp, popping)
+
+    scoreCounter()
+
+    // to know which id has been hit
+    hitPosition = randomMole.id;
+    hitFriend = randomFriend.id;
+    hitTrick = randomTrick.id;
+}
