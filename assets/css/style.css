@@ -6,8 +6,6 @@
     font-family: 'Cute Font' ,sans-serif;
 }
 
-
-
 /*general styles*/
 body {
     min-height: 100vh;
@@ -77,6 +75,7 @@ h4{
     color: white;
 }
 
+/* grid section*/
 .grid2{
     height: 606px;
     width: 606px;
@@ -97,6 +96,7 @@ h4{
     border: black solid 1px;
 }
 
+/* basic div style*/
 .hed{
     display: flex;
     justify-content: space-around;
@@ -109,6 +109,7 @@ h4{
     text-decoration: dashed;
 }
 
+/*specific button requirements*/
 .timeleftdiv{
     padding: 10%;
     display: flex;
@@ -153,4 +154,68 @@ h4{
 
 #level3 a{
     color: black;
+}
+
+
+/* specific classes for the game.*/
+.mound{
+    background-image: url("../pics/mound.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.molehint{
+    background-image: url("../pics/molehint.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.friendhint{
+    background-image: url("../pics/friendhint.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.trickhint{
+    background-image: url("../pics/moletrickhint.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.mole{
+    background-image: url("../pics/mole.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.trick{
+    background-image: url("../pics/moletrickumberella.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.friend{
+    background-image: url("../pics/rabbitpop.png");
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.farmer{
+    background-image: url("../pics/farmer.png");
+    background-size: 200px;
+    width: 200px;
+}
+
+.farmerwhack{
+    background-image: url("../pics/farmerwhack.png");
+    background-size: 200px;
+    width: 200px;
 }
