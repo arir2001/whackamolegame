@@ -296,12 +296,6 @@ function moveMole2(){
     countdownTimer = setInterval(countDown, 1000)
 };
 
-
-
 //buttons to start and stop the game
 mybutton.addEventListener('click' , startstop() )
 mybutton2.addEventListener('click' , startstop() )
-
-
-
-
