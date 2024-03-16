@@ -8,7 +8,11 @@
     <link rel="shortcut icon" href="#">
 </head>
 <body>
-    <h3> Whackamole</h3>
+    <section class="flexing">
+        <div class="logo">
+            <img src="assets/images/whackemlogo.png" alt="WhackEm Logo">
+        </div>
+    </section>
 
     <section class="hed">
         <div id="main-div">
@@ -20,6 +24,10 @@
             <button type="button" onclick="easiness(1)" id="easy"> easy </button>
             <button type="button" onclick="easiness(2)" id="harder"> harder </button>
             <button type="button" onclick="easiness(3)" id="hardest"> hardest </button>
+        </div>
+
+        <div>
+            <button type="button" id="rules"> how to play </button>
         </div>
     </section>
 
@@ -41,8 +49,6 @@
     </section>
 
     <section class="gamesection">
-        
-        <div id="farmer" class="farmer"> </div>
 
         <div class="grid2"> 
             <div class="square" id="1"></div>
@@ -57,21 +63,22 @@
 
         </div>
 
-        <div id = "levels">
-            <div class="timeleftdiv"> 
-                <h4> Time Left:</h4>
-                <h4 id="time-left"> 60</h4>
-            </div>
-    
-            <div id="levels">
-                <button type="button" id = "level2"> <a href="level2"> Level 2</a> </button>
-                <button type="button" id = "level3"> <a href="level3"> Level 3</a> </button>
-            </div>
-    
-        </div>
-
     </section>
 
+    <div id = "levels">
+        <div id="farmer" class="farmer"> </div>
+
+        <div class="timeleftdiv"> 
+            <h4> Time Left:</h4>
+            <h4 id="time-left"> 60</h4>
+        </div>
+
+        <div id="levels">
+            <button type="button" id = "level2"> <a href="level2"> Level 2</a> </button>
+            <button type="button" id = "level3"> <a href="level3"> Level 3</a> </button>
+        </div>
+
+    </div>
 <script src="assets/js/script.js"></script>
 </body>
 
