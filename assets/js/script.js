@@ -268,3 +268,34 @@ function startstop(stop){
         hardestButton.disabled = false;
     }
 }
+
+//timer: 
+let timeleft = document.querySelector('#time-left');
+let currentTime = 60;
+
+
+//starting the game!
+function moveMole2(){
+    //assigning squares new classes every 1400 ms
+    timergame = setInterval(randomMole, assigning);
+
+    //ending the game once the 60 secs are over
+    function countDown(){
+        currentTime--
+        timeleft.textContent = currentTime;
+    
+        if (currentTime ==0){
+            alert("GAME OVER!")
+            startstop(true)
+        }
+    }
+    
+    countdownTimer = setInterval(countDown, 1000)
+};
+
+
+
+//buttons to start and stop the game
+mybutton.addEventListener('click' , startstop() )
+mybutton2.addEventListener('click' , startstop() )
+
