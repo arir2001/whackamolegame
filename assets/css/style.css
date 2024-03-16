@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-}
+
 
 .nav{
     padding: 1%;
@@ -100,8 +100,8 @@ h4{
 
 /* grid section*/
 .grid2{
-    height: 92vw;
-    width: 92vw;
+    height: 61vw;
+    width: 63vw;
     display: flex;
     flex-wrap: wrap;
 }
@@ -111,8 +111,8 @@ h4{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    min-height: 100vw;
-    width: 98vw;
+    min-height: 65vw;
+    width: 70vw;
     align-content: center;
 }
 
@@ -160,7 +160,7 @@ h4{
 }
 
 .timer{
-
+    display: block;
 }
 
 #level2{
@@ -186,72 +186,77 @@ h4{
 
 /* specific classes for the game.*/
 .mound{
-    background-image: url("../images/molehole.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-image: url(../images/molehole.png);
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
+}
+.square{
+    height: 20vw;
+    width: 20vw;
+    border: black solid 1px;
 }
 
 .molehint{
     background-image: url("../images/molehint.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 .friendhint{
     background-image: url("../images/friendhint.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 .trickhint{
     background-image: url("../images/trickhint.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 .mole{
     background-image: url("../images/molepop.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 
 .trick{
     background-image: url("../images/trickpop.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 .friend{
     background-image: url("../images/friendpop.png");
-    background-size: 30vw;
-    height: 30vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 .farmer{
     background-image: url(../images/farmer.png);
-    background-size: 30vw;
-    height: 28vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 
 .farmerwhack{
     background-image: url("../images/farmerwhack.png");
-    background-size: 30vw;
-    height: 28vw;
-    width: 30vw;
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
 }
 
 /* for the galaxy fold*/ 
-@media (min-width: 280px) {
+@media (max-width: 285px) {
     button{
         font-size: 1.7vh;
         margin: 0;
@@ -259,135 +264,100 @@ h4{
 
     .mound{
         background-image: url(../images/molehole.png);
-        background-size: 20vw;
-        height: 20vw;
-        width: 20vw;
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
     }
     .square{
-        height: 20vw;
-        width: 20vw;
+        height: 22vw;
+        width: 22vw;
         border: black solid 1px;
     }
-
+    
+    
     .grid2{
-        height: 63vw;
-        width: 63vw;
+        height: 66vw;
+        width: 70vw;
         display: flex;
         flex-wrap: wrap;
     }
-
+    
     .gamesection{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
-        min-height: 65vw;
-        width: 70vw;
+        min-height: 71vw;
+        width: 71vw;
         align-content: center;
     }
+    
+    .molehint{
+        background-image: url("../images/molehint.png");
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
+    .friendhint{
+        background-image: url("../images/friendhint.png");
+        background-size: 22vw;
+        width: 22vw;
+    }
+    
+    .trickhint{
+        background-image: url("../images/trickhint.png");
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
+    .mole{
+        background-image: url("../images/molepop.png");
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
+    
+    .trick{
+        background-image: url("../images/trickpop.png");
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
+    .friend{
+        background-image: url("../images/friendpop.png");
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
+    .farmer{
+        background-image: url(../images/farmer.png);
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
+    
+    .farmerwhack{
+        background-image: url("../images/farmerwhack.png");
+        background-size: 22vw;
+        height: 22vw;
+        width: 22vw;
+    }
+    
 }
 
 
+@media (min-width: 920px) {
 
-@media (min-width: 760px) {
     h4{
         font-size: 3vh;
         margin: 0;
     }
     
 
-}
-
-
-
-@media (min-width: 800px) {
-
-    .grid2{
-        height: 696px;
-        width: 696px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .gamesection{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: row;
-        min-height: 100vw;
-        width: 98vw;
-        align-content: center;
-    }
-    
-    .square{
-        height: 230px;
-        width: 230px;
-        border: black solid 1px;
-    }
-    
-
-    .mound{
-        background-image: url("../images/molehole.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    .molehint{
-        background-image: url("../images/molehint.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    .friendhint{
-        background-image: url("../images/friendhint.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    .trickhint{
-        background-image: url("../images/trickhint.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    .mole{
-        background-image: url("../images/molepop.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    
-    .trick{
-        background-image: url("../images/trickpop.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    .friend{
-        background-image: url("../images/friendpop.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    .farmer{
-        background-image: url(../images/farmer.png);
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
-    
-    
-    .farmerwhack{
-        background-image: url("../images/farmerwhack.png");
-        background-size: 230px;
-        height: 230px;
-        width: 230px;
-    }
   }
