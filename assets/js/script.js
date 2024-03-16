@@ -53,3 +53,41 @@ function scoreCounter(){
         startstop(true);
     }
 }
+
+assigning = 0 //starting values
+popping = 0 //pops up the 
+
+x = 0
+function easiness(x){
+    if (x == 0){
+        alert('choose a difficulty level before you begin!')
+        return x=0
+    }
+
+    if (x == 1){
+        console.log('easy button pressed');
+        easyButton.disabled = false;
+        harderButton.disabled = true;
+        hardestButton.disabled = true;
+
+        return assigning = 1800 , popping = 1200
+    }
+
+    if (x == 2){
+        console.log('harder button pressed');
+        easyButton.disabled = true;
+        harderButton.disabled = false;
+        hardestButton.disabled = true;
+
+        return assigning = 1800 , popping = 1600
+    }
+
+    if (x == 3){
+        console.log('hardest button pressed');
+        easyButton.disabled = true;
+        harderButton.disabled = true;
+        hardestButton.disabled = false;
+ 
+        return assigning = 1300 , popping = 1100 
+    }
+}
