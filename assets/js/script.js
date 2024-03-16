@@ -36,3 +36,20 @@ let molescore = document.querySelector('#molescore');
 let result  = 0;
 let oopsie  = 0;
 let molestrick  = 0;
+
+
+//score alerts
+function scoreCounter(){
+    if (score.textContent == 4){
+        alert("you win!");
+        startstop(true);
+    }
+    if (oopsiescore.textContent == 4){
+        alert("you have killed many rabbits. You lose!");
+        startstop(true);
+    }
+    if (molescore.textContent == 4){
+        alert("The moles just stole your hammer. You lose!");
+        startstop(true);
+    }
+}
