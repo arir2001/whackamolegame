@@ -159,35 +159,35 @@ h4{
 
 /* specific classes for the game.*/
 .mound{
-    background-image: url("../pics/mound.png");
+    background-image: url("../images/molehole.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
 }
 
 .molehint{
-    background-image: url("../pics/molehint.png");
+    background-image: url("../images/molehint.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
 }
 
 .friendhint{
-    background-image: url("../pics/friendhint.png");
+    background-image: url("../images/friendhint.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
 }
 
 .trickhint{
-    background-image: url("../pics/moletrickhint.png");
+    background-image: url("../images/trickhint.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
 }
 
 .mole{
-    background-image: url("../pics/mole.png");
+    background-image: url("../images/molepop.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
@@ -195,27 +195,27 @@ h4{
 
 
 .trick{
-    background-image: url("../pics/moletrickumberella.png");
+    background-image: url("../images/trickpop.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
 }
 
 .friend{
-    background-image: url("../pics/rabbitpop.png");
+    background-image: url("../images/friendpop.png");
     background-size: 200px;
     width: 200px;
     height: 200px;
 }
 
 .farmer{
-    background-image: url("../pics/farmer.png");
+    background-image: url("../images/farmer.png");
     background-size: 200px;
     width: 200px;
 }
 
 .farmerwhack{
-    background-image: url("../pics/farmerwhack.png");
+    background-image: url("../images/farmerwhack.png");
     background-size: 200px;
     width: 200px;
 }

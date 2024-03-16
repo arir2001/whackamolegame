@@ -24,7 +24,9 @@ const harderButton =  document.querySelector("#harder")
 const hardestButton =  document.querySelector("#hardest")
 
 
+//variable 
 let time = 60;
+
 const endtime = 60;
 
 // names for the elements selectors
@@ -36,6 +38,7 @@ let molescore = document.querySelector('#molescore');
 let result  = 0;
 let oopsie  = 0;
 let molestrick  = 0;
+
 
 
 //score alerts
@@ -53,6 +56,7 @@ function scoreCounter(){
         startstop(true);
     }
 }
+
 
 assigning = 0 //starting values
 popping = 0 //pops up the 
@@ -91,8 +95,6 @@ function easiness(x){
         return assigning = 1300 , popping = 1100 
     }
 }
-
-
 
 //assigning the classes to each square
 function randomMole(){
@@ -173,6 +175,7 @@ function randomMole(){
     hitTrick = randomTrick.id;
 }
 
+
 //if a square with the id hit-x has been hit, the point is added to the appropriate score. 
 squares.forEach(square => {
     square.addEventListener('mousedown' , () => {
@@ -203,7 +206,6 @@ squares.forEach(square => {
         farmerDiv.classList.add('farmer');
     })
 } )
-
 
 
 //now start-stop function which allows the game to be started and restarted using buttons. 
@@ -269,6 +271,7 @@ function startstop(stop){
     }
 }
 
+
 //timer: 
 let timeleft = document.querySelector('#time-left');
 let currentTime = 60;
@@ -298,4 +301,7 @@ function moveMole2(){
 //buttons to start and stop the game
 mybutton.addEventListener('click' , startstop() )
 mybutton2.addEventListener('click' , startstop() )
+
+
+
 
