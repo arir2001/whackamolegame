@@ -172,3 +172,68 @@ function randomMole(){
     hitFriend = randomFriend.id;
     hitTrick = randomTrick.id;
 }
+
+
+
+//now start-stop function which allows the game to be started and restarted using buttons. 
+//the var stop is set to null to begin with, false if start button pressed, true if stop button pressed.
+//when start is pressed, the moveMole2 function starts, which moves the squares around the grid in a specified time frame.
+// when stop is pressed, the timer is cleared, paused, and blue squares removed. 
+let stop = null;
+
+function startstop(stop){
+    if (stop == false){
+        console.log('start button pressed');
+        console.log(assigning, popping)
+
+        if (assigning != 0){
+            moveMole2()
+            mybutton.disabled = true;
+            mybutton2.disabled = false;
+        }else{
+            alert("choose a difficulty!")
+        }
+        
+    
+    }else if (stop == true){
+        console.log('stopped!');
+
+        //clearing the game
+        squares.forEach(square => {
+            square.classList.remove('mound');
+
+            square.classList.remove('molehint');
+            square.classList.remove('friendhint');
+            square.classList.remove('trickhint');
+
+            square.classList.remove('mole');
+            square.classList.remove('friend');
+            square.classList.remove('trick');
+
+            console.log('entered')
+        })
+
+        clearInterval(timergame);
+        clearTimeout(timerPopUp);
+        clearInterval(countdownTimer);
+        currentTime = 60;
+        timeleft.textContent = currentTime;
+
+        result  = 0;
+        oopsie  = 0;
+        molestrick  = 0;
+
+        molescore.textContent = 0;
+        score.textContent = 0;
+        oopsiescore.textContent = 0;
+        assigning = 0;
+        popping = 0;
+
+        mybutton.disabled = false; //disabling buttons once clicked
+        mybutton2.disabled = true;
+
+        easyButton.disabled = false;
+        harderButton.disabled = false;
+        hardestButton.disabled = false;
+    }
+}
