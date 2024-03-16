@@ -1,4 +1,76 @@
 
+/*general styles*/
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: green;
+    justify-content: center;
+}
+
+.nav{
+    padding: 1%;
+    font-size: 5vh;
+    text-decoration: none;
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.heading{
+    text-align: center;
+    text-decoration: underline;
+    margin: 1vh;
+}
+
+
+h1{
+    font-size: 10vh;
+}
+
+h2{
+    font-size: 8vh;
+}
+
+h3{
+    font-size: 5vh;
+    text-align: center;
+}
+
+h4{
+    font-size: 3vh;
+}
+
+.flexing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn{
+    border: 2px solid;
+    border-radius: 40%;
+    font-size: 10vh;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 2px;
+}
+
+.btn:hover{
+    color: white;
+}
+
+
+
+
 .grid2{
     height: 606px;
     width: 606px;
