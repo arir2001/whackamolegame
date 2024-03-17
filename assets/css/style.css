@@ -114,6 +114,7 @@ h4{
     min-height: 65vw;
     width: 70vw;
     align-content: center;
+
 }
 
 .square{
@@ -123,11 +124,21 @@ h4{
 }
 
 /* basic div style*/
-.hed{
+
+.buttons_top{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 2%;
+    width: 70vw;
+}
+
+.buttons_top1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
     margin: 2%;
     width: 70vw;
 }
@@ -159,9 +170,7 @@ h4{
     margin: 2%;
 }
 
-.timer{
-    display: block;
-}
+
 
 #level2{
     color: black;
@@ -245,6 +254,7 @@ h4{
     background-size: 20vw;
     height: 20vw;
     width: 20vw;
+    background-repeat: no-repeat;
 }
 
 
@@ -253,6 +263,7 @@ h4{
     background-size: 20vw;
     height: 20vw;
     width: 20vw;
+    background-repeat: no-repeat;
 }
 
 /* for the galaxy fold*/ 
@@ -351,13 +362,59 @@ h4{
     
 }
 
+.testing{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
 
-@media (min-width: 920px) {
+@media (min-width: 1000px) {
 
     h4{
         font-size: 3vh;
         margin: 0;
     }
-    
 
-  }
+
+    .gamesection{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        min-height: 65vw;
+        width: 70vw;
+        align-content: center;
+        padding: 2%
+    }
+
+    .testing{
+        display: flex;
+        align-items: center;
+        flex-direction: row; 
+    }
+
+    .buttons_container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    
+    .buttons_top{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 2%;
+        width: auto;
+    }
+
+    .buttons_top1{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-left: 15%;
+        width: auto;
+    }
+}

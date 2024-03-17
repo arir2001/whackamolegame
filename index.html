@@ -14,63 +14,60 @@
         </div>
     </section>
 
-    <section class="hed">
-        <div id="main-div">
-            <button type="button" onclick="startstop(false)" id="mybigbutton"> play game </button>
-            <button type="button" onclick="startstop(true)" id="mybigbutton2"> stop game </button>
+    <section class="buttons_container">
+        <div class="buttons_top">
+            <div id="main-div">
+                <button type="button" onclick="startstop(false)" id="mybigbutton"> play game </button>
+                <button type="button" onclick="startstop(true)" id="mybigbutton2"> stop game </button>
+            </div>
+
+            <div>
+                <button type="button" onclick="easiness(1)" id="easy"> easy </button>
+                <button type="button" onclick="easiness(2)" id="harder"> harder </button>
+                <button type="button" onclick="easiness(3)" id="hardest"> hardest </button>
+            </div>
+
+            <div>
+                <button type="button" id="rules"> how to play </button>
+            </div>
         </div>
 
-        <div>
-            <button type="button" onclick="easiness(1)" id="easy"> easy </button>
-            <button type="button" onclick="easiness(2)" id="harder"> harder </button>
-            <button type="button" onclick="easiness(3)" id="hardest"> hardest </button>
+        <div class="buttons_top1">
+            <div class="center">
+                <h4> Your score: <span id="score"> 0</span></h4>
+            </div>
+
+            <div class="center">
+                <h4> Oopsie!: <span id="oopsiescore"> 0</span></h4>
+            </div>
+
+            <div class="center">
+                <h4> Mole's score:  <span id="molescore"> 0</span></h4>
+            </div>
         </div>
 
-        <div>
-            <button type="button" id="rules"> how to play </button>
-        </div>
-    </section>
-
-    <section class="hed">
-        <div class="center">
-            <h4> Your score:</h4>
-            <h4 id="score"> 0</h4>
-        </div>
-
-        <div class="center">
-            <h4> Oopsie!:</h4>
-            <h4 id="oopsiescore"> 0</h4>
-        </div>
-
-        <div class="center">
-            <h4> Mole's score:</h4>
-            <h4 id="molescore"> 0</h4>
-        </div>
-    </section>
-
-    <section class="timer">
-        <div class="timeleftdiv"> 
-            <h4> Time Left:</h4>
-            <h4 id="time-left"> 60</h4>
+        <div class="buttons_top">
+            <div class="timeleftdiv"> 
+                <h4> Time Left: <span id="time-left"> 0</span></h4>
+            </div>
         </div>
     </section>
 
-    <section class="gamesection">
+    <section class="testing">
+        <div class="gamesection">
+            <div class="grid2"> 
+                <div class="square mound" id="1"></div>
+                <div class="square mound" id="2"></div>
+                <div class="square mound" id="3"></div>
+                <div class="square mound" id="4"></div>
+                <div class="square mound" id="5"></div>
+                <div class="square mound" id="6"></div>
+                <div class="square mound" id="7"></div>
+                <div class="square mound" id="8"></div>
+                <div class="square mound" id="9"></div>
 
-        <div class="grid2"> 
-            <div class="square mound" id="1"></div>
-            <div class="square mound" id="2"></div>
-            <div class="square mound" id="3"></div>
-            <div class="square mound" id="4"></div>
-            <div class="square mound" id="5"></div>
-            <div class="square mound" id="6"></div>
-            <div class="square mound" id="7"></div>
-            <div class="square mound" id="8"></div>
-            <div class="square mound" id="9"></div>
-
+            </div>
         </div>
-
-    </section>
 
     <div id = "levels">
         <div id="farmer" class="farmer"> </div>
@@ -81,6 +78,8 @@
         </div>
 
     </div>
+    </section>
+
 <script src="assets/js/script.js"></script>
 </body>
 
