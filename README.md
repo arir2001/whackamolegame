@@ -33,7 +33,7 @@ If the level button is clicked, more detail about each level is shown.
 
 
 ## Testing 
-![Lighthouse Report](assets/images/lighthousereport.png)
+![Lighthouse Report](assets/images/ligthousereport.png)
 
 
 ### Validator Testing 
