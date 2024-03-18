@@ -98,6 +98,12 @@ h4{
     height: 29vw;
 }
 
+.gamebuttons{
+    align-items: center;
+    display: flex;
+
+}
+
 /* grid section*/
 .grid2{
     height: 61vw;
@@ -138,7 +144,7 @@ h4{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     margin: 2%;
     width: 70vw;
 }
@@ -416,5 +422,102 @@ h4{
         flex-direction: column;
         padding-left: 15%;
         width: auto;
+    }
+}
+
+@media (min-width: 1080px) {
+    body{
+        margin:10%;
+    }
+
+    .gamesection{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        min-height: 690px;
+        width: 699px;
+        align-content: center;
+        padding: 2%;
+    }
+
+    .grid2{
+        height: 690px;
+        width: 696px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        /* specific classes for the game.*/
+    .mound{
+        background-image: url(../images/molehole.png);
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+    .square{
+        height: 222px;
+        width: 222px;
+        border: black solid 1px;
+    }
+
+    .molehint{
+        background-image: url("../images/molehint.png");
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+
+    .friendhint{
+        background-image: url("../images/friendhint.png");
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+
+    .trickhint{
+        background-image: url("../images/trickhint.png");
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+
+    .mole{
+        background-image: url("../images/molepop.png");
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+
+
+    .trick{
+        background-image: url("../images/trickpop.png");
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+
+    .friend{
+        background-image: url("../images/friendpop.png");
+        background-size: 222px;
+        height: 222px;
+        width: 222px;
+    }
+
+    .farmer{
+        background-image: url(../images/farmer.png);
+        background-size: 229px;
+        height: 229px;
+        width: 229px;
+        background-repeat: no-repeat;
+    }
+
+
+    .farmerwhack{
+        background-image: url("../images/farmerwhack.png");
+        background-size: 229px;
+        height: 229px;
+        width: 229px;
+        background-repeat: no-repeat;
     }
 }

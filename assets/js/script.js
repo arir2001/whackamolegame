@@ -38,7 +38,7 @@ let molescore = document.querySelector('#molescore');
 let result  = 0;
 let oopsie  = 0;
 let molestrick  = 0;
-
+var x=1;
 
 
 //score alerts
@@ -46,33 +46,40 @@ function scoreCounter(){
     if (score.textContent == 4){
         alert("you win!");
         startstop(true);
+        x= x+1;
+
+        if (x==4){
+            alert("Level completed!")
+        }
+        easiness(x);
+
     }
     if (oopsiescore.textContent == 4){
         alert("you have killed many rabbits. You lose!");
         startstop(true);
+        x=1;
     }
     if (molescore.textContent == 4){
         alert("The moles just stole your hammer. You lose!");
         startstop(true);
+        x=1;
     }
 }
 
+easyButton.disabled = true;
+harderButton.disabled = true;
+hardestButton.disabled = true;
 
 assigning = 0 //starting values
 popping = 0 //pops up the 
 
-x = 0
 function easiness(x){
-    if (x == 0){
-        alert('choose a difficulty level before you begin!')
-        return x=0
-    }
-
     if (x == 1){
         console.log('easy button pressed');
         easyButton.disabled = false;
         harderButton.disabled = true;
         hardestButton.disabled = true;
+        alert('Level One: Easy')
 
         return assigning = 1800 , popping = 1200
     }
@@ -93,6 +100,20 @@ function easiness(x){
         hardestButton.disabled = false;
  
         return assigning = 1300 , popping = 1100 
+    }
+}
+
+function level(x){
+    if(x==1){
+        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. You grab your hammer and go to whack them!")
+    }
+
+    if(x==2){
+        alert("Welcome to level two. Your son lost his rabbit in the field. Be sure not to hit him with your hammer!")
+    }
+
+    if(x==3){
+        alert("Welcome to level three. The moles have stolen your husband's umberella. If your hammer hits the umberella too many times, your hammer will break. Be careful!")
     }
 }
 
@@ -176,6 +197,12 @@ function randomMole(){
 }
 
 
+
+
+
+
+
+
 //if a square with the id hit-x has been hit, the point is added to the appropriate score. 
 squares.forEach(square => {
     square.addEventListener('mousedown' , () => {
@@ -217,6 +244,7 @@ let stop = null;
 function startstop(stop){
     if (stop == false){
         console.log('start button pressed');
+        easiness(x)
         console.log(assigning, popping)
 
         if (assigning != 0){

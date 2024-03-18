@@ -16,15 +16,9 @@
 
     <section class="buttons_container">
         <div class="buttons_top">
-            <div id="main-div">
+            <div class="gamebuttons">
                 <button type="button" onclick="startstop(false)" id="mybigbutton"> play game </button>
                 <button type="button" onclick="startstop(true)" id="mybigbutton2"> stop game </button>
-            </div>
-
-            <div>
-                <button type="button" onclick="easiness(1)" id="easy"> easy </button>
-                <button type="button" onclick="easiness(2)" id="harder"> harder </button>
-                <button type="button" onclick="easiness(3)" id="hardest"> hardest </button>
             </div>
 
             <div>
@@ -71,13 +65,14 @@
 
     <div id = "levels">
         <div id="farmer" class="farmer"> </div>
-
-        <div id="levels">
-            <button type="button" id = "level2"> <a href="level2"> Level 2</a> </button>
-            <button type="button" id = "level3"> <a href="level3"> Level 3</a> </button>
-        </div>
-
+        <div class="gamebuttons">
+            <button type="button" onclick="level(1)" id="easy"> Level One </button>
+            <button type="button" onclick="level(2)" id="harder"> Level Two </button>
+            <button type="button" onclick="level(3)" id="hardest"> Level Three </button>
+        </div class="gamebuttons">
+    
     </div>
+
     </section>
 
 <script src="assets/js/script.js"></script>
