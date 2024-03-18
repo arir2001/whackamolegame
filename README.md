@@ -4,9 +4,8 @@ Whack 'Em is a whack-a-mole game for kids. The site is basic, easy to use and ha
 
 
 ![Responsive Mockup](assets/images/amiresponsive.png)
+Created using: https://ui.dev/amiresponsive?url=https://arir2001.github.io/whackamolegame/
 ## Features 
-
-
 ### Existing Features
 
 The top holds the introductory logo: 
@@ -21,7 +20,7 @@ There is a start-game button, stop-game button, and how to play button. The how-
 The game grid sits below the buttons and displays the pop-up moles, rabbits and moles with umberellas. 
 ![GameGrid](assets/images/gamegrid.png)
 
-Below that is a cartoon that flips when the moles are clicked to show the farmer hitting the mole.There are also 3 buttons that show what level the player is on.
+Below that is a cartoon that flips when the moles are clicked to show the farmer hitting the mole.There are also 3 buttons that show what level the player is on. Every Four points, a new level is introduced with new characters that arrive at quicker intervals. 
 ![Below Game Cartoon](assets/images/below.png) 
 
 Depending on the screen size, this cartoon moves to the right at larger screen sizes. 
@@ -31,6 +30,8 @@ Depending on the screen size, this cartoon moves to the right at larger screen s
 If the level button is clicked, more detail about each level is shown. 
 ![Level One Alert](assets/images/leveloneshow.png)
 
+When the Three levels are completed passed, there is a bonus level where the player taps as many times on the cartoon. There are only 10 seconds for this level in comparisson to the others which had 60 seconds. 
+![BonusLevel](assets/images/bonuslevel.png)
 
 ## Testing 
 ## Lighthouse Report:
