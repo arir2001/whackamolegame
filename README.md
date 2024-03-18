@@ -33,8 +33,10 @@ If the level button is clicked, more detail about each level is shown.
 
 
 ## Testing 
+## Lighthouse Report:
 ![Lighthouse Report](assets/images/ligthousereport.png)
 
+The Lighthouse report returned a 92/100.
 
 ### Validator Testing 
 
@@ -69,8 +71,9 @@ The live link can be found here - https://arir2001.github.io/whackamolegame/
 ## Credits 
 
 ### Content 
+The media was all created by me in Adobe Illustrator using the help of their AI function.
+![Illustrator](assets/images/illu.png)
 
-The very basic code 
 ### Media
 
 - The photos used on the home and sign up page are all from Pexels open source library: https://www.pexels.com/
