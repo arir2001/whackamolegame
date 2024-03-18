@@ -70,15 +70,12 @@ h4{
 }
 
 .btn{
-    border: 2px solid;
-    border-radius: 40%;
-    font-size: 10vh;
+    border: 1px solid;
+    border-radius: 10%;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    padding: 2px;
 }
 
 .btn:hover{
@@ -107,7 +104,7 @@ h4{
 /* grid section*/
 .grid2{
     height: 61vw;
-    width: 63vw;
+    width: 62vw;
     display: flex;
     flex-wrap: wrap;
 }
@@ -120,7 +117,8 @@ h4{
     min-height: 65vw;
     width: 70vw;
     align-content: center;
-
+    border-radius: 2%;
+    background-color: rosybrown
 }
 
 .square{
@@ -273,7 +271,7 @@ h4{
 }
 
 /* for the galaxy fold*/ 
-@media (max-width: 285px) {
+@media (max-width: 300px) {
     button{
         font-size: 1.7vh;
         margin: 0;
@@ -297,6 +295,7 @@ h4{
         width: 70vw;
         display: flex;
         flex-wrap: wrap;
+
     }
     
     .gamesection{
@@ -307,6 +306,8 @@ h4{
         min-height: 71vw;
         width: 71vw;
         align-content: center;
+        border-radius: 2%;
+        background-color: rosybrown;
     }
     
     .molehint{
@@ -376,9 +377,19 @@ h4{
 
 @media (min-width: 1000px) {
 
+    body{
+        margin:10%;
+        margin-top: 0;
+    }
+
     h4{
         font-size: 3vh;
         margin: 0;
+    }
+
+    .logoimg {
+        width: 50vw;
+        height: auto;
     }
 
 
@@ -428,6 +439,7 @@ h4{
 @media (min-width: 1080px) {
     body{
         margin:10%;
+        margin-top: 0;
     }
 
     .gamesection{
@@ -439,11 +451,13 @@ h4{
         width: 699px;
         align-content: center;
         padding: 2%;
+        border-radius: 2%;
+        background-color: rosybrown;
     }
 
     .grid2{
-        height: 690px;
-        width: 696px;
+        height: 673px;
+        width: 673px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -506,18 +520,19 @@ h4{
 
     .farmer{
         background-image: url(../images/farmer.png);
-        background-size: 229px;
-        height: 229px;
-        width: 229px;
+        background-size: 258px;
+        height: 320px;
+        width: 217px;
         background-repeat: no-repeat;
     }
 
 
     .farmerwhack{
         background-image: url("../images/farmerwhack.png");
-        background-size: 229px;
-        height: 229px;
-        width: 229px;
+        background-size: 258px;
+        height: 320px;
+        width: 217px;
         background-repeat: no-repeat;
     }
+
 }

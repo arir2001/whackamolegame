@@ -40,6 +40,10 @@ let oopsie  = 0;
 let molestrick  = 0;
 var x=1;
 
+let hitPosition = 0;
+let hitFriend = 0;
+let hitTrick = 0;
+
 
 //score alerts
 function scoreCounter(){
@@ -73,6 +77,20 @@ hardestButton.disabled = true;
 assigning = 0 //starting values
 popping = 0 //pops up the 
 
+function level(x){
+    if(x==1){
+        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. You grab your hammer and go to whack them!")
+    }
+
+    if(x==2){
+        alert("Welcome to level two. Your son lost his rabbit in the field. Be sure not to hit him with your hammer!")
+    }
+
+    if(x==3){
+        alert("Welcome to level three. The moles have stolen your husband's umberella. If your hammer hits the umberella too many times, your hammer will break. Be careful!")
+    }
+}
+
 function easiness(x){
     if (x == 1){
         console.log('easy button pressed');
@@ -103,29 +121,61 @@ function easiness(x){
     }
 }
 
-function level(x){
-    if(x==1){
-        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. You grab your hammer and go to whack them!")
+//level 1
+function randomMole(){
+    //to 3 choose random numbers
+    var arr = [];
+
+    //to 3 choose random numbers
+    while(arr.length < 3){
+        var r = Math.floor(Math.random() * 8) + 1;
+        if(arr.indexOf(r) === -1) arr.push(r);
+    }
+    let a = arr[0];
+    
+    //this is the list of squares without mole, friend or trick. 
+
+    //to clear the previous square classes
+    squares.forEach(square => {
+        square.classList.remove('mound');
+
+        square.classList.remove('molehint');
+
+        square.classList.remove('mole');
+
+    } )
+
+    //to make the behind look like mounds. 
+    for(let i = 0; i < 9; i++) {
+        if (squares[i] !== a) {
+            squares[i].classList.add('mound')
+        }
+    }
+    //to assign new hint squares
+    let randomMole= squares[a];
+
+    randomMole.classList.add('molehint');
+
+    //assign the actual pop ups moles, rabbits, trick
+    function PopUp(){
+        randomMole.classList.add('mole');
     }
 
-    if(x==2){
-        alert("Welcome to level two. Your son lost his rabbit in the field. Be sure not to hit him with your hammer!")
-    }
+    timerPopUp = setTimeout(PopUp, popping)
 
-    if(x==3){
-        alert("Welcome to level three. The moles have stolen your husband's umberella. If your hammer hits the umberella too many times, your hammer will break. Be careful!")
-    }
+    scoreCounter()
+
+    // to know which id has been hit
+    hitPosition = randomMole.id;
 }
 
 //assigning the classes to each square
-function randomMole(){
+function randomMole1(){
     //to 3 choose random numbers
     var arr = [];
     var lis = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     var newlis = []
     var newlis2 = []
-    var newlis3 = []
-
 
     //to 3 choose random numbers
     while(arr.length < 3){
@@ -134,7 +184,6 @@ function randomMole(){
     }
     let a = arr[0];
     let b = arr[1];
-    let c = arr[2];
 
     for (let i = 0; i < 9; i++) {
         if (lis[i] !== a) {
@@ -144,11 +193,6 @@ function randomMole(){
     for (let i = 0; i < 8; i++) {
         if (newlis[i] !== b) {
             newlis2.push(newlis[i]);
-        }
-    }
-    for (let i = 0; i < 7; i++) {
-        if (newlis2[i] !== c) {
-            newlis3.push(newlis2[i]);
         }
     }//this is the list of squares without mole, friend or trick. 
 
@@ -239,11 +283,12 @@ let stop = null;
 function startstop(stop){
     if (stop == false){
         console.log('start button pressed');
-        easiness(x)
-        console.log(assigning, popping)
+        easiness(x);
+        level(x);
+        console.log(assigning, popping);
 
         if (assigning != 0){
-            moveMole()
+            moveMole();
             mybutton.disabled = true;
             mybutton2.disabled = false;
         }else{
@@ -302,8 +347,16 @@ let currentTime = 60;
 
 //starting the game!
 function moveMole(){
-    //assigning squares new classes every 1400 ms
-    timergame = setInterval(randomMole, assigning);
+    if (x==1){
+        timergame = setInterval(randomMole, assigning);
+    }
+    if (x==2){
+        timergame = setInterval(randomMole2, assigning);
+    }
+    if (x==3){
+        timergame = setInterval(randomMole3, assigning);
+    }
+    
 
     //ending the game once the 60 secs are over
     function countDown(){
