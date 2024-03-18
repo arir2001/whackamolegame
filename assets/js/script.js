@@ -53,19 +53,23 @@ easyButton.disabled = true;
 harderButton.disabled = true;
 hardestButton.disabled = true;
 
-assigning = 0 //starting values
-popping = 0 //pops up the 
+assigning = 0; //starting values
+popping = 0; //pops up the 
 
+function howtoplay(){
+    alert('To play the game, press "Play Game". The grid will then fill with mole-holes, where different charactres will pop up. In level one, only moles will pop up. Four points will move you on to the next level! \n Every mole you click will add a point to "Your Score". In level two, your son lost his rabbit in your field. If you hit his rabbit accidentally four times, you lose and must restart the game. \n In the third level, the moles have stolen your husbands umberella. They use this to protect themselves from your hammer; if you hit this four times, your hammer will break and you will need to retsart the game. \n If you press "Stop Game", the game will restart when you press "Start Game" again.');
+
+}
 
 //score alerts
 function scoreCounter(){
     if (score.textContent == 4){
-        alert("you win!");
+        alert("you win! Press 'Play Game' to continue to the next level.");
         startstop(true);
         x= x+1;
 
         if (x==4){
-            alert("Level completed!")
+            alert("Level completed!");
         }
         easiness(x);
 
@@ -82,29 +86,34 @@ function scoreCounter(){
     }
 }
 
+//alets to inform the player of each level's goal.
 function level(x){
     if(x==1){
-        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. Grab grab your hammer and go to whack them!")
+        alert('Level One: Easy');
+        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. Grab grab your hammer and go to whack them!");
     }
 
     if(x==2){
-        alert("Welcome to level two. Your son lost his rabbit in the field. Be sure not to hit him with your hammer!")
+        alert('Level Two: Harder');
+        alert("Welcome to level two. Your son lost his rabbit in the field. Be sure not to hit him with your hammer!");
     }
 
     if(x==3){
-        alert("Welcome to level three. The moles have stolen your husband's umberella. If your hammer hits the umberella too many times, your hammer will break. Be careful!")
+        alert('Level Three: Hardest');
+        alert("Welcome to level three. The moles have stolen your husband's umberella. If your hammer hits the umberella too many times, your hammer will break. Be careful!");
     }
 }
 
+//function controlling the dificulty of the levels.
 function easiness(x){
     if (x == 1){
         console.log('easy button pressed');
         easyButton.disabled = false;
         harderButton.disabled = true;
         hardestButton.disabled = true;
-        alert('Level One: Easy')
+        
 
-        return assigning = 1800 , popping = 1200
+        return assigning = 1800 , popping = 1200;
     }
 
     if (x == 2){
@@ -112,8 +121,9 @@ function easiness(x){
         easyButton.disabled = true;
         harderButton.disabled = false;
         hardestButton.disabled = true;
+        
 
-        return assigning = 1800 , popping = 1600
+        return assigning = 1800 , popping = 1600;
     }
 
     if (x == 3){
@@ -121,19 +131,23 @@ function easiness(x){
         easyButton.disabled = true;
         harderButton.disabled = true;
         hardestButton.disabled = false;
+        
  
-        return assigning = 1300 , popping = 1100 
+        return assigning = 1300 , popping = 1100 ;
     }
 
     if (x == 4){
         console.log('Four ');
+        let currentTime = 10;
         easyButton.disabled = true;
         harderButton.disabled = true;
         hardestButton.disabled = false;
+
+        alert('BONUS LEVEL!');
  
         section2.classList.add('hidden');
         section3.classList.remove('hidden');
-        bonuslevel()
+        bonuslevel();
     }
 }
 
@@ -159,12 +173,12 @@ function randomMole(){
 
         square.classList.remove('mole');
 
-    } )
+    } );
 
     //to make the behind look like mounds. 
     for(let i = 0; i < 9; i++) {
         if (squares[i] !== a) {
-            squares[i].classList.add('mound')
+            squares[i].classList.add('mound');
         }
     }
     //to assign new hint squares
@@ -177,9 +191,9 @@ function randomMole(){
         randomMole.classList.add('mole');
     }
 
-    timerPopUp = setTimeout(PopUp, popping)
+    timerPopUp = setTimeout(PopUp, popping);
 
-    scoreCounter()
+    scoreCounter();
 
     // to know which id has been hit
     hitPosition = randomMole.id;
@@ -190,8 +204,8 @@ function randomMole2(){
     //to 3 choose random numbers
     var arr = [];
     var lis = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    var newlis = []
-    var newlis2 = []
+    var newlis = [];
+    var newlis2 = [];
 
     //to 3 choose random numbers
     while(arr.length < 3){
@@ -222,11 +236,11 @@ function randomMole2(){
         square.classList.remove('mole');
         square.classList.remove('friend');
 
-    } )
+    } );
 
     //to make the behind look like mounds. 
     for(let i = 0; i < 8; i++) {
-        squares[newlis[i]].classList.add('mound')
+        squares[newlis[i]].classList.add('mound');
     }
     //to assign new hint squares
     let randomMole= squares[a];
@@ -241,9 +255,9 @@ function randomMole2(){
         randomFriend.classList.add('friend');
     }
 
-    timerPopUp = setTimeout(PopUp, popping)
+    timerPopUp = setTimeout(PopUp, popping);
 
-    scoreCounter()
+    scoreCounter();
 
     // to know which id has been hit
     hitPosition = randomMole.id;
@@ -258,9 +272,9 @@ function randomMole3(){
     //to 3 choose random numbers
     var arr = [];
     var lis = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    var newlis = []
-    var newlis2 = []
-    var newlis3 = []
+    var newlis = [];
+    var newlis2 = [];
+    var newlis3 = [];
 
 
     //to 3 choose random numbers
@@ -300,11 +314,11 @@ function randomMole3(){
         square.classList.remove('friend');
         square.classList.remove('trick');
 
-    } )
+    } );
 
     //to make the behind look like mounds. 
     for(let i = 0; i < 7; i++) {
-        squares[newlis2[i]].classList.add('mound')
+        squares[newlis2[i]].classList.add('mound');
         }
     //to assign new hint squares
     let randomMole= squares[a];
@@ -322,9 +336,9 @@ function randomMole3(){
         randomTrick.classList.add('trick');
     }
 
-    timerPopUp = setTimeout(PopUp, popping)
+    timerPopUp = setTimeout(PopUp, popping);
 
-    scoreCounter()
+    scoreCounter();
 
     // to know which id has been hit
     hitPosition = randomMole.id;
@@ -340,28 +354,28 @@ squares.forEach(square => {
         farmerDiv.classList.add('farmerwhack');
 
         if (square.id == hitPosition){
-            result ++
+            result ++ ;
             score.textContent = result;
             hitPosition = null;
         }
 
         if (square.id == hitFriend){
-            oopsie ++
+            oopsie ++ ;
             oopsiescore.textContent = oopsie;
             hitFriend = null;
         }
 
         if (square.id == hitTrick){
-            molestrick ++
+            molestrick ++ ;
             molescore.textContent = molestrick;
             hitTrick = null;
         }
-    })
+    });
     square.addEventListener('mouseup' , () => {
         farmerDiv.classList.remove('farmerwhack');
         farmerDiv.classList.add('farmer');
-    })
-} )
+    });
+} );
 
 //now start-stop function which allows the game to be started and restarted using buttons. 
 //the var stop is set to null to begin with, false if start button pressed, true if stop button pressed.
@@ -371,10 +385,8 @@ let stop = null;
 
 function startstop(stop){
     if (stop == false){
-        console.log('start button pressed');
         easiness(x);
         level(x);
-        console.log(assigning, popping);
 
         moveMole();
         mybutton.disabled = true;
@@ -383,8 +395,6 @@ function startstop(stop){
         
     
     }else if (stop == true){
-        console.log('stopped!');
-
         //clearing the game
         squares.forEach(square => {
             square.classList.remove('mound');
@@ -397,8 +407,7 @@ function startstop(stop){
             square.classList.remove('friend');
             square.classList.remove('trick');
 
-            console.log('entered')
-        })
+        });
 
         clearInterval(timergame);
         clearTimeout(timerPopUp);
@@ -447,56 +456,64 @@ function moveMole(){
 
     //ending the game once the 60 secs are over
     function countDown(){
-        currentTime--
+        currentTime-- ;
         timeleft.textContent = currentTime;
     
         if (currentTime ==0){
-            alert("GAME OVER!")
-            startstop(true)
+            alert("GAME OVER!");
+            startstop(true);
         }
     }
     
-    countdownTimer = setInterval(countDown, 1000)
-};
+    countdownTimer = setInterval(countDown, 1000);
+}
 
 //buttons to start and stop the game
-mybutton.addEventListener('click' , startstop() )
-mybutton2.addEventListener('click' , startstop() )
+mybutton.addEventListener('click' , startstop() );
+mybutton2.addEventListener('click' , startstop() );
 
 
 
 function bonuslevel(){
-    alert('Welcome to the bonus level! Click the farmer as many times as you can to whack as many of those final moles. You have ten seconds!')
+    alert('Welcome to the bonus level! Click the farmer as many times as you can to whack as many of those final moles. You have ten seconds!');
     
     section3.addEventListener('mousedown' , () => {
 
         farmerGame.classList.remove('farmer2');
         farmerGame.classList.add('farmerwhack2');
 
-        result ++
+        result ++ ;
         score.textContent = result;
 
-    })
+    });
 
     section3.addEventListener('mouseup' , () => {
         farmerGame.classList.remove('farmerwhack2');
         farmerGame.classList.add('farmer2');
-    })
+    });
 
-    currentTime=10
+    currentTime=10 ;
 
     //ending the game once the 60 secs are over
     function countDown(){
-        currentTime--
+        currentTime-- ;
         timeleft.textContent = currentTime;
     
         if (currentTime ==0){
-            alert("Congrats, you whacked "+ result + " moles! Your farm is now free of those pesky pests.... for now....")
-            startstop(true)
+            alert("Congrats, you whacked "+ result + " moles! Your farm is now free of those pesky pests.... for now....");
+            startstop(true);
+            x=1;
+
+            console.log(x, );
+
+            section2.classList.remove('hidden');
+            section3.classList.add('hidden');
+
+            return;
         }
     }
     
-    countdownTimer = setInterval(countDown, 1000)
+    countdownTimer = setInterval(countDown, 1000);
 }
 
 
