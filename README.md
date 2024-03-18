@@ -71,14 +71,10 @@ The live link can be found here - https://arir2001.github.io/whackamolegame/
 ## Credits 
 
 ### Content 
-The media was all created by me in Adobe Illustrator using the help of their AI function.
-![Illustrator](assets/images/illu.png)
+The basic code was inspired by this video's section on whack a mole games: https://youtu.be/ec8vSKJuZTk?si=X5unoo1LLL3J1zx5
 
 ### Media
 
-- The photos used on the home and sign up page are all from Pexels open source library: https://www.pexels.com/
-
-- The logo waas creaated using AI generator in Adobe Illustrator using a prompt, and then edited to look smoother.
-
-
+The media was all created by me in Adobe Illustrator using the help of their AI function.
+![Illustrator](assets/images/illu.png)
 
