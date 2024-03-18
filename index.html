@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    <section class="buttons_container">
+    <section id="section1" class="buttons_container">
         <div class="buttons_top">
             <div class="gamebuttons">
                 <button type="button" onclick="startstop(false)" id="mybigbutton" class="btn"> play game </button>
@@ -47,7 +47,7 @@
         </div>
     </section>
 
-    <section class="testing">
+    <section id="section2" class="testing">
         <div class="gamesection">
             <div class="grid2"> 
                 <div class="square mound" id="1"></div>
@@ -63,16 +63,19 @@
             </div>
         </div>
 
-    <div id = "levels">
-        <div id="farmer" class="farmer"> </div>
-        <div class="gamebuttons">
-            <button type="button" onclick="level(1)" id="easy"> Level One </button>
-            <button type="button" onclick="level(2)" id="harder"> Level Two </button>
-            <button type="button" onclick="level(3)" id="hardest"> Level Three </button>
-        </div class="gamebuttons">
-    
-    </div>
+        <div id = "levels">
+            <div id="farmer" class="farmer"> </div>
+            <div class="gamebuttons">
+                <button type="button" onclick="level(1)" id="easy"> Level One </button>
+                <button type="button" onclick="level(2)" id="harder"> Level Two </button>
+                <button type="button" onclick="level(3)" id="hardest"> Level Three </button>
+            </div class="gamebuttons">
+        </div>
 
+    </section>
+
+    <section>
+        <div id="farmerGame" class="farmerGame hidden"> </div>
     </section>
 
 <script src="assets/js/script.js"></script>

@@ -101,6 +101,11 @@ h4{
 
 }
 
+.hidden{
+    display = none !important;
+}
+
+
 /* grid section*/
 .grid2{
     height: 61vw;

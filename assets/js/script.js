@@ -2,6 +2,9 @@ const squares = document.querySelectorAll('.square');
 
 const farmerDiv = document.querySelector('#farmer');
 
+const section1 = document.querySelector('#section1');
+const section2 = document.querySelector('#section2');
+
 const mound = document.querySelector('.mound');
 
 const molehint = document.querySelector('.molehint');
@@ -119,6 +122,16 @@ function easiness(x){
  
         return assigning = 1300 , popping = 1100 
     }
+
+    if (x == 4){
+        console.log('Four ');
+        easyButton.disabled = true;
+        harderButton.disabled = true;
+        hardestButton.disabled = false;
+ 
+        section2.classList.add('hidden');
+        console.log(section2)
+    }
 }
 
 //level 1
@@ -170,7 +183,7 @@ function randomMole(){
 }
 
 //assigning the classes to each square
-function randomMole1(){
+function randomMole2(){
     //to 3 choose random numbers
     var arr = [];
     var lis = [0, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -202,6 +215,82 @@ function randomMole1(){
 
         square.classList.remove('molehint');
         square.classList.remove('friendhint');
+
+        square.classList.remove('mole');
+        square.classList.remove('friend');
+
+    } )
+
+    //to make the behind look like mounds. 
+    for(let i = 0; i < 8; i++) {
+        squares[newlis[i]].classList.add('mound')
+    }
+    //to assign new hint squares
+    let randomMole= squares[a];
+    let randomFriend= squares[b];
+
+    randomMole.classList.add('molehint');
+    randomFriend.classList.add('friendhint');
+
+    //assign the actual pop ups moles, rabbits, trick
+    function PopUp(){
+        randomMole.classList.add('mole');
+        randomFriend.classList.add('friend');
+    }
+
+    timerPopUp = setTimeout(PopUp, popping)
+
+    scoreCounter()
+
+    // to know which id has been hit
+    hitPosition = randomMole.id;
+    hitFriend = randomFriend.id;
+}
+
+
+//assigning the classes to each square
+
+//assigning the classes to each square
+function randomMole3(){
+    //to 3 choose random numbers
+    var arr = [];
+    var lis = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    var newlis = []
+    var newlis2 = []
+    var newlis3 = []
+
+
+    //to 3 choose random numbers
+    while(arr.length < 3){
+        var r = Math.floor(Math.random() * 8) + 1;
+        if(arr.indexOf(r) === -1) arr.push(r);
+    }
+    let a = arr[0];
+    let b = arr[1];
+    let c = arr[2];
+
+    for (let i = 0; i < 9; i++) {
+        if (lis[i] !== a) {
+            newlis.push(lis[i]);
+        }
+    }
+    for (let i = 0; i < 8; i++) {
+        if (newlis[i] !== b) {
+            newlis2.push(newlis[i]);
+        }
+    }
+    for (let i = 0; i < 7; i++) {
+        if (newlis2[i] !== c) {
+            newlis3.push(newlis2[i]);
+        }
+    }//this is the list of squares without mole, friend or trick. 
+
+    //to clear the previous square classes
+    squares.forEach(square => {
+        square.classList.remove('mound');
+
+        square.classList.remove('molehint');
+        square.classList.remove('friendhint');
         square.classList.remove('trickhint');
 
         square.classList.remove('mole');
@@ -213,7 +302,7 @@ function randomMole1(){
     //to make the behind look like mounds. 
     for(let i = 0; i < 7; i++) {
         squares[newlis2[i]].classList.add('mound')
-    }
+        }
     //to assign new hint squares
     let randomMole= squares[a];
     let randomFriend= squares[b];
@@ -239,8 +328,6 @@ function randomMole1(){
     hitFriend = randomFriend.id;
     hitTrick = randomTrick.id;
 }
-
-
 
 //if a square with the id hit-x has been hit, the point is added to the appropriate score. 
 squares.forEach(square => {
@@ -272,7 +359,6 @@ squares.forEach(square => {
         farmerDiv.classList.add('farmer');
     })
 } )
-
 
 //now start-stop function which allows the game to be started and restarted using buttons. 
 //the var stop is set to null to begin with, false if start button pressed, true if stop button pressed.
