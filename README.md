@@ -10,7 +10,7 @@ Whack 'Em is a whack-a-mole game for kids. The site is basic, easy to use and ha
 ### Existing Features
 
 The top holds the introductory logo: 
-![Logo](<img src=assets/images/logoreadme.png alt="drawing" width="200"/>)
+![Logo](assets/images/logoreadme.png )
 
 Below the logo but above the actual game grid is the buttons. 
 ![Buttons](assets/images/buttonsreadme.png)
