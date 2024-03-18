@@ -169,7 +169,7 @@ function randomMole(){
     //to make the behind look like mounds. 
     for(let i = 0; i < 7; i++) {
         squares[newlis2[i]].classList.add('mound')
-        }
+    }
     //to assign new hint squares
     let randomMole= squares[a];
     let randomFriend= squares[b];
@@ -195,11 +195,6 @@ function randomMole(){
     hitFriend = randomFriend.id;
     hitTrick = randomTrick.id;
 }
-
-
-
-
-
 
 
 
@@ -248,7 +243,7 @@ function startstop(stop){
         console.log(assigning, popping)
 
         if (assigning != 0){
-            moveMole2()
+            moveMole()
             mybutton.disabled = true;
             mybutton2.disabled = false;
         }else{
@@ -306,7 +301,7 @@ let currentTime = 60;
 
 
 //starting the game!
-function moveMole2(){
+function moveMole(){
     //assigning squares new classes every 1400 ms
     timergame = setInterval(randomMole, assigning);
 
