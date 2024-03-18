@@ -10,7 +10,7 @@ Whack 'Em is a whack-a-mole game for kids. The site is basic, easy to use and ha
 ### Existing Features
 
 The top holds the introductory logo: 
-![Logo](assets/images/logoreadme.png)
+![Logo](<img src=assets/images/logoreadme.png alt="drawing" width="200"/>)
 
 Below the logo but above the actual game grid is the buttons. 
 ![Buttons](assets/images/buttonsreadme.png)
@@ -23,7 +23,9 @@ The game grid sits below the buttons and displays the pop-up moles, rabbits and 
 
 Below that is a cartoon that flips when the moles are clicked to show the farmer hitting the mole.There are also 3 buttons that show what level the player is on.
 ![Below Game Cartoon](assets/images/below.png) 
+
 Depending on the screen size, this cartoon moves to the right at larger screen sizes. 
+
 ![WHACKED](assets/images/WHACKED.png) 
 
 If the level button is clicked, more detail about each level is shown. 
