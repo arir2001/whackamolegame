@@ -1,9 +1,11 @@
 const squares = document.querySelectorAll('.square');
 
 const farmerDiv = document.querySelector('#farmer');
+const farmerGame = document.querySelector('#farmerGame');
 
 const section1 = document.querySelector('#section1');
 const section2 = document.querySelector('#section2');
+const section3 = document.querySelector('#section3');
 
 const mound = document.querySelector('.mound');
 
@@ -47,6 +49,13 @@ let hitPosition = 0;
 let hitFriend = 0;
 let hitTrick = 0;
 
+easyButton.disabled = true;
+harderButton.disabled = true;
+hardestButton.disabled = true;
+
+assigning = 0 //starting values
+popping = 0 //pops up the 
+
 
 //score alerts
 function scoreCounter(){
@@ -62,27 +71,20 @@ function scoreCounter(){
 
     }
     if (oopsiescore.textContent == 4){
-        alert("you have killed many rabbits. You lose!");
+        alert("You have killed many rabbits. You lose!");
         startstop(true);
         x=1;
     }
     if (molescore.textContent == 4){
-        alert("The moles just stole your hammer. You lose!");
+        alert("The moles just broke your hammer. You lose!");
         startstop(true);
         x=1;
     }
 }
 
-easyButton.disabled = true;
-harderButton.disabled = true;
-hardestButton.disabled = true;
-
-assigning = 0 //starting values
-popping = 0 //pops up the 
-
 function level(x){
     if(x==1){
-        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. You grab your hammer and go to whack them!")
+        alert("Welcome to level one. You are a farmer whose farm is overrun with moles. Grab grab your hammer and go to whack them!")
     }
 
     if(x==2){
@@ -130,7 +132,8 @@ function easiness(x){
         hardestButton.disabled = false;
  
         section2.classList.add('hidden');
-        console.log(section2)
+        section3.classList.remove('hidden');
+        bonuslevel()
     }
 }
 
@@ -373,13 +376,10 @@ function startstop(stop){
         level(x);
         console.log(assigning, popping);
 
-        if (assigning != 0){
-            moveMole();
-            mybutton.disabled = true;
-            mybutton2.disabled = false;
-        }else{
-            alert("choose a difficulty!")
-        }
+        moveMole();
+        mybutton.disabled = true;
+        mybutton2.disabled = false;
+    
         
     
     }else if (stop == true){
@@ -403,8 +403,7 @@ function startstop(stop){
         clearInterval(timergame);
         clearTimeout(timerPopUp);
         clearInterval(countdownTimer);
-        currentTime = 60;
-        timeleft.textContent = currentTime;
+        
 
         result  = 0;
         oopsie  = 0;
@@ -433,6 +432,8 @@ let currentTime = 60;
 
 //starting the game!
 function moveMole(){
+    currentTime = 60;
+    timeleft.textContent = currentTime;
     if (x==1){
         timergame = setInterval(randomMole, assigning);
     }
@@ -461,3 +462,42 @@ function moveMole(){
 //buttons to start and stop the game
 mybutton.addEventListener('click' , startstop() )
 mybutton2.addEventListener('click' , startstop() )
+
+
+
+function bonuslevel(){
+    alert('Welcome to the bonus level! Click the farmer as many times as you can to whack as many of those final moles. You have ten seconds!')
+    
+    section3.addEventListener('mousedown' , () => {
+
+        farmerGame.classList.remove('farmer2');
+        farmerGame.classList.add('farmerwhack2');
+
+        result ++
+        score.textContent = result;
+
+    })
+
+    section3.addEventListener('mouseup' , () => {
+        farmerGame.classList.remove('farmerwhack2');
+        farmerGame.classList.add('farmer2');
+    })
+
+    currentTime=10
+
+    //ending the game once the 60 secs are over
+    function countDown(){
+        currentTime--
+        timeleft.textContent = currentTime;
+    
+        if (currentTime ==0){
+            alert("Congrats, you whacked "+ result + " moles! Your farm is now free of those pesky pests.... for now....")
+            startstop(true)
+        }
+    }
+    
+    countdownTimer = setInterval(countDown, 1000)
+}
+
+
+

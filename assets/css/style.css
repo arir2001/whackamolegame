@@ -59,6 +59,7 @@ h3{
 h4{
     font-size: 2.5vh;
     margin: 0;
+    text-align: center;
 }
 
 .flexing{
@@ -102,7 +103,7 @@ h4{
 }
 
 .hidden{
-    display = none !important;
+    display : none !important;
 }
 
 
@@ -273,6 +274,51 @@ h4{
     height: 20vw;
     width: 20vw;
     background-repeat: no-repeat;
+}
+
+#farmerGame{
+    border: solid pink;
+    border-radius: 8%;
+    padding: 20vw;
+    margin: 0%;
+    /* display: flex; */
+    background-color: #a6d1b7;
+}
+
+.farmer{
+    background-image: url(../images/farmer.png);
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
+    background-repeat: no-repeat;
+}
+
+
+.farmerwhack{
+    background-image: url("../images/farmerwhack.png");
+    background-size: 20vw;
+    height: 20vw;
+    width: 20vw;
+    background-repeat: no-repeat;
+}
+
+.farmer2{
+    background-image: url(../images/farmer.png);
+    background-size: 42vw;
+    background-repeat: no-repeat;
+}
+
+
+.farmerwhack2{
+    background-image: url(../images/farmerwhack.png);
+    background-size: 42vw;
+    background-repeat: no-repeat;
+}
+
+
+
+#section3{
+    margin: 3%;
 }
 
 /* for the galaxy fold*/ 
